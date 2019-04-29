@@ -79,7 +79,7 @@ function b(){
 
 a();
 ```
- ![](https://cdn.nlark.com/yuque/0/2018/png/174243/1542091882645-558a3997-dd15-4586-b568-c821da120f5b.png) 
+ ![](../asset/16.png)
  
 上图表示函数调用执行过程栈的变化。
 
@@ -95,7 +95,7 @@ a();
 
 例子：
 
- ![](https://cdn.nlark.com/yuque/0/2018/png/174243/1542092961762-ec301065-886e-4c72-a8b9-c3f6e35092a7.png) 
+ ![](../asset/17.png)
 
 ### [](#6s51gs)[](#6s51gs)栈在括号匹配中的应用
 
@@ -121,4 +121,4 @@ a();
 
 参考答案：
 
- ![](https://cdn.nlark.com/yuque/0/2018/png/174243/1542093759288-c4c13d54-bc10-41c5-a01f-64fb49da063a.png)
+ ![](../asset/18.png)

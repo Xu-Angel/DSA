@@ -6,7 +6,7 @@
 
 ### 树的术语
 
- ![](https://cdn.nlark.com/yuque/0/2018/png/174243/1542080269634-6888a1b0-76e6-4e74-ba28-c03226cba309.png) 
+ ![](../asset/19.png)
 
 #### 节点
 
@@ -44,7 +44,7 @@
 
 #### 层
 
-节点的层数 = 节点的深度 \+ 1。
+节点的层数 = 节点的深度 + 1。
 
 层数的跟深度的计算类似，但它的计数起点是 1，即根节点位于第 1 层
 
@@ -64,13 +64,13 @@
 
 #### 满二叉树（Fully Binary Tree）
 
- ![](http://doctrina.org/images/full-complete-binary-tree.png) 
+ ![](../asset/20.png)
 
 叶子节点全部在最底层，且除叶子节点外，每个节点都有左右两个子节点
 
-#### )完全二叉树（Complete Binary Tree）
+#### 完全二叉树（Complete Binary Tree）
 
- ![](https://coj.uci.cu/downloads/images/800px-Cbt.png) 
+ ![](https://coj.uci.cu/downloads/images/800px-Cbt.png)
 
 叶子节点都在最底下两层，最后一层的叶子节点都靠左排列，并且除了最后一层，其他层的节点个数都要达到最大。
 
@@ -90,7 +90,7 @@
 
 把根节点存在下标为 i = 1 的位置，左子节点存储在下标为 2*i = 2的位置，右子节点存储在下标为 2 *i + 1 = 3的位置。以此类推，B节点左子节点存储在 2 * i = 2 * 2 = 4的位置，右子节点存储在 2 * i + 1 = 2 * 2 + 1 = 5 的位置。
 
- ![](https://static001.geekbang.org/resource/image/14/30/14eaa820cb89a17a7303e8847a412330.jpg) 
+ ![](../asset/21.jpg) 
 
 那数组可以看出根节点开始，从左往右，都是先存储左子节点，再右子节点。这符合完全二叉树的结构，也是为什么完全二叉树要求最后一层的子节点都要靠左。
 
