@@ -20,3 +20,15 @@ const rotate = (arr, k) => {
   console.log(arr);
 }
 rotate([-1, -100, 3, 99], 2)
+
+// OPT: 数组移动的次数 没有限制 所以应该进行步数优化 先进行取余 得出真正需要的步数
+
+function rotate(arr, k) {
+  const len = arr.length
+  const step = k % len
+  return arr.slice(-step).concat(arr.slice(0, len - step))
+}
+
+// 末尾元素：arr.splice(-k%arr.length)的返回值 剩余元素：arr
+
+const moveArr = (arr,k)=>arr.splice(-k%arr.length).concat(arr)
