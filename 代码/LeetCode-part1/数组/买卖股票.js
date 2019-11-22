@@ -1,15 +1,15 @@
 let arr = [1, 2, 3, 4, 5]
 // 一升值就买卖
 // 弊端：会产生连续购入和卖出
-const maxProfit = arr => {
-  let total = 0
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] < arr[i + 1]) {
-      total += arr[i + 1] - arr[i]
-    }
-  }
-  return total
-}
+// const maxProfit = arr => {
+//   let total = 0
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] < arr[i + 1]) {
+//       total += arr[i + 1] - arr[i]
+//     }
+//   }
+//   return total
+// }
 
 // 增加两个索引记录买入卖出  算出峰值 进行买卖
 /* 
@@ -50,4 +50,4 @@ var maxProfit = function (prices) {
   }
   return total;
 };
-console.log(maxProfit([1, 4, 2, 7, 8]));
+maxProfit([1, 4, 2, 7, 8])
