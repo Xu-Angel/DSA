@@ -16,3 +16,17 @@ const isAnagram = (s, t) => {
 }
 
 // 如果存在 Unicode 字符，利用正则，将其替换正常的字符（使用String.fromCodePoint()）
+
+const isAnagram = (s, t) => {
+  if (s.length !== t.length) return false
+  if (s.split('').sort().join(',') !== t.split('').sort().join(',')) return false
+  return true
+}
+
+const isAnagram = (s, t) => {
+  if (s.length !== t.length) return false
+  var sArr = s.split('')
+  var tArr = t.split('')
+  if (JSON.stringify(sArr.sort()) !== JSON.stringify(tArr.sort())) return false
+  return true
+}
