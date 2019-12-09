@@ -57,8 +57,37 @@ Trie 树，也叫“字典树”。顾名思义，它是一个树形结构。它
 当我们在 Trie 树中查找字符串的时候，我们就可以通过字符的 ASCII 码减去“a”的 ASCII 码，迅速找到匹配的子节点的指针。比如，d 的 ASCII 码减去 a 的 ASCII 码就是 3，那子节点 d 的指针就存储在数组中下标为 3 的位置中。
 
 描述了这么多，有可能你还是有点懵，我把上面的描述翻译成了代码，你可以结合着一块看下，应该有助于你理解。
-```
-    public class Trie {  private TrieNode root = new TrieNode('/'); // 存储无意义字符   // 往 Trie 树中插入一个字符串  public void insert(char[] text) {    TrieNode p = root;    for (int i = 0; i < text.length; ++i) {      int index = text[i] - 'a';      if (p.children[index] == null) {        TrieNode newNode = new TrieNode(text[i]);        p.children[index] = newNode;      }      p = p.children[index];    }    p.isEndingChar = true;  }   // 在 Trie 树中查找一个字符串  public boolean find(char[] pattern) {    TrieNode p = root;    for (int i = 0; i < pattern.length; ++i) {      int index = pattern[i] - 'a';      if (p.children[index] == null) {        return false; // 不存在 pattern      }      p = p.children[index];    }    if (p.isEndingChar == false) return false; // 不能完全匹配，只是前缀    else return true; // 找到 pattern  }   public class TrieNode {    public char data;    public TrieNode[] children = new TrieNode[26];    public boolean isEndingChar = false;    public TrieNode(char data) {      this.data = data;    }  }}
+```java
+public class Trie {
+  private TrieNode root = new TrieNode('/'); // 存储无意义字符   // 往 Trie 树中插入一个字符串 
+  public void insert(char[] text) {
+    TrieNode p = root; for (int i = 0; i < text.length; ++i) {
+      int index = text[i] - 'a'; if (p.children[index] == null) {
+        TrieNode newNode = new TrieNode(text[i]);
+        p.children[index] = newNode;
+      } p = p.children[index];
+    }
+    p.isEndingChar = true;
+  } // 在 Trie 树中查找一个字符串  
+  public boolean find(char[] pattern) {
+    TrieNode p = root;
+    for (int i = 0; i < pattern.length; ++i) {
+      int index = pattern[i] - 'a';
+      if (p.children[index] == null) {
+        return false; // 不存在 pattern   
+      }
+      p = p.children[index];
+    }
+    if (p.isEndingChar == false) return false; // 不能完全匹配，只是前缀   
+    else return true; // 找到 pattern
+  }
+  public class TrieNode { public char data;
+    public TrieNode[] children = new TrieNode[26];
+    public boolean isEndingChar = false;
+    public TrieNode(char data) { this.data = data; }
+}
+}
+
 ```
 Trie 树的实现，你现在应该搞懂了。现在，我们来看下，**在 Trie 树中，查找某个字符串的时间复杂度是多少？**
 
