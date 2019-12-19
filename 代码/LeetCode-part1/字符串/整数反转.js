@@ -70,3 +70,4 @@ var reverse = function(x) {
 
   return result;
 };
+reverse(123)
